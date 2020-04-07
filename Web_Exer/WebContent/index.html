@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulário HTML</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <form action="enviar-email.php" class="formulario" method="post"> 
+        <p> Preencha o formulário abaixo</p>
+        
+        <div class="field">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+        </div>
+        
+        <br><label for="">Data De Nascimento:</label>
+           <input type= "text" required="required" placeholder ="Informe Data de Nascimento" name="num"/>
+         
+        <input type="submit" name="acao" value="Enviar">
+    </form>
+ 
+</body>
+</html>
