@@ -1,32 +1,21 @@
-<div class="container" >
-    <a class="links" id="paracadastro"></a>
-    <a class="links" id="paralogin"></a>
-    
-    <div class="content">      
-      <!--FORMULÁRIO DE LOGIN-->
-      <div id="login">
-        <form method="post" action=""> 
-          <h1>Login</h1> 
-          <p> 
-            <label for="email_login">Seu e-mail</label>
-            <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@email.com"/>
-          </p>
-          
-          <p> 
-            <label for="senha_login">Sua senha</label>
-            <input id="senha_login" name="senha_login" required="required" type="password" placeholder="12345" /> 
-          </p>
-          
-          <p> 
-            <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
-            <label for="manterlogado">Manter-me logado</label>
-          </p>
-          
-          <p> 
-            <input type="submit" value="Entrar" /> 
-          </p>
-          
-          <!--  <p class="link">
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Login de Usuário</title>
+	</head>
+	<form action="autenticacao" method="post">
+		<label>Login:</label> 
+		<input type="text" name="nomeUsuario" />
+		<br />
+		<label>Senha:</label>
+		<input type="password" name="senhaUsuario" />
+		<br />
+		<input type="submit" value="Entrar" />
+	</form>
+</html>
+
+
+ <!--  <p class="link">
             Ainda não tem conta?
             <a href="#paracadastro">Cadastre-se</a>
           </p>-->
