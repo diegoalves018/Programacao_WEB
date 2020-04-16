@@ -123,7 +123,7 @@ public class DataNascimento {
 
 			idade = -404;
 			
-		} else if (dataDigitada.get(Calendar.YEAR) <= 1900) {
+		} else if (dataDigitada.get(Calendar.YEAR) < 1900) {
 
 			idade = -1900;
 			
@@ -153,7 +153,7 @@ public class DataNascimento {
 
 		} else if (calculoIdade() == -1900) {
 
-			erro = erro + "Não é possível calcular data que tenha ano inferior a 1901!";
+			erro = erro + "Não é possível calcular data que tenha ano inferior a 1900!";
 
 		}
 
