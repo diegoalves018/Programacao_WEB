@@ -121,7 +121,7 @@ public class DataNascimento {
 
 		if (dataDigitada.get(Calendar.YEAR) > hoje.get(Calendar.YEAR)) {
 
-			idade = -100;
+			idade = -404;
 			
 		} else if (dataDigitada.get(Calendar.YEAR) <= 1900) {
 
@@ -147,13 +147,13 @@ public class DataNascimento {
 
 		String erro = "";
 
-		if (calculoIdade() == -100) {
+		if (calculoIdade() == -404) {
 
-			erro = erro + "A Data informada não pode ser superior ao dia de hoje!";
+			erro = erro + "Ano informado não pode ser superior ao atual!";
 
 		} else if (calculoIdade() == -1900) {
 
-			erro = erro + "Não é possível calcular que tenha ano inferior a 1900!";
+			erro = erro + "Não é possível calcular data que tenha ano inferior a 1900!";
 
 		}
 

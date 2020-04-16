@@ -30,19 +30,18 @@ public class Aniver extends HttpServlet {
 
 		try {
 
-			// String recebida
-			String recebida = request.getParameter("dataNascimento").replaceAll("/", "").replaceAll(" ", "")
+			// Recebendo String
+			String recebe = request.getParameter("dataNascimento").replaceAll("/", "").replaceAll(" ", "")
 					.replaceAll("-", "");
 
-			// Formato data: dd/mm/yyyy
-			String formatado = Formatacao.formatarData(recebida);
+			// Formatcao data
+			String formatado = Formatacao.formatarData(recebe);
 
-			Date recebidaParaData = sdf.parse(formatado);
+			Date recebeParaData = sdf.parse(formatado);
 
-			classeData.setDataNascimento(recebidaParaData);
+			classeData.setDataNascimento(recebeParaData);
 
-			// Validação
-			int resultadoRgs = classeData.validaData(recebida);
+			int resultadoRgs = classeData.validaData(recebe);
 
 			// Idade
 			int idadeResultado = classeData.calculoIdade();
@@ -67,22 +66,22 @@ public class Aniver extends HttpServlet {
 
 				String regra = classeData.resultadoRegras(resultadoRgs);
 
-				out.println("Descrição: " + regra);
-
-			} else {
-
-				out.println("Data válida");
-
+				
+				out.println("Erro ao calcular: " + regra);
+				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				
+				
 			}
 
-			if (classeData.calculoIdade() == -100) {
+			if (classeData.calculoIdade() == -404) {
 
 				out.println("Erro ao calcular: " + regrasData);
-
+				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
 			} else if (classeData.calculoIdade() == -1900) {
 
 				out.println("Erro ao calcular: " + regrasData);
-
+				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				
 			} else if (resultadoRgs == 0) {
 
 				out.println("");
