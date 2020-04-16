@@ -110,7 +110,7 @@ public class DataNascimento {
 
 	}
 
-	/*public Integer calculoIdade() {
+	public Integer calculoIdade() {
 
 		Calendar dataDigitada = Calendar.getInstance();
 		dataDigitada.setTime(dataNascimento);
@@ -127,28 +127,22 @@ public class DataNascimento {
 
 			idade = -1900;
 			
-		} else {
+		}else if  
+            (dataDigitada.get(Calendar.DAY_OF_MONTH) > hoje.get(Calendar.DAY_OF_MONTH) && dataDigitada.get(Calendar.MONTH) >= hoje.get(Calendar.MONTH)) {
+	         idade = (hoje.get(Calendar.YEAR) - dataDigitada.get(Calendar.YEAR))-1;
 
-			idade = hoje.get(Calendar.YEAR) - dataDigitada.get(Calendar.YEAR);
-
-			if (hoje.get(Calendar.MONTH) < dataDigitada.get(Calendar.MONTH)) {
-
-				idade--;
-
-			} else if (hoje.get(Calendar.DAY_OF_MONTH) < dataDigitada.get(Calendar.DAY_OF_MONTH)) {
-
-				idade--;
-			}
-		}
+		}else if
+			 (dataDigitada.get(Calendar.MONTH) < hoje.get(Calendar.MONTH) || (dataDigitada.get(Calendar.MONTH) == hoje.get(Calendar.MONTH) && dataDigitada.get(Calendar.DAY_OF_MONTH) <= hoje.get(Calendar.DAY_OF_MONTH))) {
+				idade = hoje.get(Calendar.YEAR) - dataDigitada.get(Calendar.YEAR);
+			
+		     }else {
+				idade = (dataDigitada.get(Calendar.YEAR) - hoje.get(Calendar.YEAR))-1;
+				
+		     }	
 		
-		if (dataDigitada.get(Calendar.MONTH) == 1) {
-
-			idade++;
-		}
-		
-		return idade;
+		 return idade;
 	}
-*/
+
 	public String anoRegras() {
 
 		String erro = "";
@@ -169,35 +163,35 @@ public class DataNascimento {
 
 	public String resultadoRegras(int resultadoRgs) {
 
-		String resultado = "";
+		String resultadoErro = "";
 
 		if (resultadoRgs == -1) {
 
-			resultado = resultado + "Não existe mês com mais de 31 dias!";
+			resultadoErro = resultadoErro + "Não existe mês com mais de 31 dias!";
 
 		} else if (resultadoRgs == -2) {
 
-			resultado = resultado + "Não existe dia menor ou igual a zero!";
+			resultadoErro = resultadoErro + "Não existe dia menor ou igual a zero!";
 
 		} else if (resultadoRgs == -3) {
 
-			resultado = resultado + "Não existe ano com mais de 12 meses!";
+			resultadoErro = resultadoErro + "Não existe ano com mais de 12 meses!";
 
 		} else if (resultadoRgs == -4) {
 
-			resultado = resultado + "Não existe mês menor ou igual a zero!";
+			resultadoErro = resultadoErro + "Não existe mês menor ou igual a zero!";
 
 		} else if (resultadoRgs == -5) {
 
-			resultado = resultado + "Mês digitado vai até o dia 30!";
+			resultadoErro = resultadoErro + "Mês digitado vai até o dia 30!";
 
 		} else if (resultadoRgs == -6) {
 
-			resultado = resultado + "O ano digitado não é bissexto, fevereiro vai até o dia 28!";
+			resultadoErro = resultadoErro + "O ano digitado não é bissexto, fevereiro vai até o dia 28!";
 
 		}
 
-		return resultado;
+		return resultadoErro;
 
 	}
 

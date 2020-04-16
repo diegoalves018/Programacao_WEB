@@ -48,11 +48,11 @@ public class Aniver extends HttpServlet {
 			int idadeResultado = classeData.calculoIdade();
 
 			// Regra
-			String regras = classeData.anoRegras();
+			String regrasData = classeData.anoRegras();
 
 			out.println("<html>");
 			out.println("<head>");
-			out.println("<title>Resultado</title>");
+			out.println("<title>Resultado Do Aniversário</title>");
 			out.println("</head>");
 			out.println("<body>");
 			out.println("<div class=\"container\" style=\"text-align: center\">");
@@ -65,9 +65,9 @@ public class Aniver extends HttpServlet {
 			
 			if (resultadoRgs != 0) {
 
-				String aqui = classeData.resultadoRegras(resultadoRgs);
+				String regra = classeData.resultadoRegras(resultadoRgs);
 
-				out.println("Descrição: " + aqui);
+				out.println("Descrição: " + regra);
 
 			} else {
 
@@ -77,11 +77,11 @@ public class Aniver extends HttpServlet {
 
 			if (classeData.calculoIdade() == -100) {
 
-				out.println("Erro ao calcular: " + regras);
+				out.println("Erro ao calcular: " + regrasData);
 
 			} else if (classeData.calculoIdade() == -1900) {
 
-				out.println("Erro ao calcular: " + regras);
+				out.println("Erro ao calcular: " + regrasData);
 
 			} else if (resultadoRgs == 0) {
 
