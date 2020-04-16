@@ -65,11 +65,9 @@ public class Aniver extends HttpServlet {
 			if (resultadoRgs != 0) {
 
 				String regra = classeData.resultadoRegras(resultadoRgs);
-
 				
 				out.println("Erro ao calcular: " + regra);
 				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
-				
 				
 			}
 
@@ -77,6 +75,7 @@ public class Aniver extends HttpServlet {
 
 				out.println("Erro ao calcular: " + regrasData);
 				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				
 			} else if (classeData.calculoIdade() == -1900) {
 
 				out.println("Erro ao calcular: " + regrasData);

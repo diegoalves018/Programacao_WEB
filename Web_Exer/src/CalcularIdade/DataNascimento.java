@@ -153,7 +153,7 @@ public class DataNascimento {
 
 		} else if (calculoIdade() == -1900) {
 
-			erro = erro + "Não é possível calcular data que tenha ano inferior a 1900!";
+			erro = erro + "Não é possível calcular data que tenha ano inferior a 1901!";
 
 		}
 
