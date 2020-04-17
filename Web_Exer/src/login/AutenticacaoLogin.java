@@ -35,6 +35,7 @@ public class AutenticacaoLogin extends HttpServlet {
 				out.println("</head>");
 				out.println("<body>");
 				out.println("Login efeituado com Sucesso!");
+				out.println("<meta http-equiv=\"refresh\" content=\"0;url=http://localhost:8080/Web_Exer/CalculoAniver.html\" />");
 				out.println("</body>");
 				out.println("</html>");
 				
