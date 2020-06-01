@@ -9,34 +9,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import DAO.UsuarioDao;
+
 @WebServlet("/autenticacao")
 public class AutenticacaoLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-			String name = request.getParameter("nomeUsuario");
+			String email = request.getParameter("email");
+			String senha = request.getParameter("senha");
 			
-			String password = request.getParameter("senhaUsuario");
+			UsuarioDao dao=new UsuarioDao();
 			
-			if(name.equals("admin") && password.equals("admin")) {
+			
+			if(dao.check(email, senha))
+			{
+				HttpSession session=request.getSession();
+				session.setAttribute("username",email);
 				
-				Usuario user = new Usuario(name, password);
-				
-				HttpSession session = request.getSession();
-				
-				session.setAttribute("aut", user);
-				
-				PrintWriter out = response.getWriter();
-				
-				out.println("<html>");
-				out.println("<head>");
-				out.println("</head>");
-				out.println("<body>");
-				out.println("Login efeituado com Sucesso!");
-				out.println("<meta http-equiv=\"refresh\" content=\"0;url=http://localhost:8080/Web_Exer/CalculoAniverJSP.jsp\" />");
-				out.println("</body>");
-				out.println("</html>");
+				response.sendRedirect("welcome.jsp");
 				
 			}else {
 				
@@ -47,7 +39,7 @@ public class AutenticacaoLogin extends HttpServlet {
 				out.println("</head>");
 				out.println("<body>");
 				out.println("Usuário ou senha inválidos");
-				out.println("<a href=\"LoginJSP.jsp\"> Tentar novamente </a>");
+				out.println("<a href=\"index.jsp\"> Tentar novamente </a>");
 				out.println("</body>");
 				out.println("</html>");
 				
