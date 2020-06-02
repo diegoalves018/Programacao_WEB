@@ -62,7 +62,7 @@ public class UsuarioDao {
 		return status;
 	}
 	
-	private static boolean existeUsuario(Usuario user) {
+	public static boolean existeUsuario(Usuario user) {
 
 		List<Usuario> list=UsuarioDao.getTodosCadastros();
 		for(Usuario e:list){
