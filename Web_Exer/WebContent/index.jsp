@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login</title>
+    <title>Login</title>                 
     <style>
       #boxes {
         content: "";
@@ -44,8 +44,10 @@
 </table>
 </form>
 
-<br/>
+<br>
 <a href="VerServlet">Lista de Cadastrados</a>
+<br>
+<a href="ListaCadastroJSP.jsp">Lista de Cadastrados em JSP</a>
 </div>
       <div id="column2">
         <h2>Login</h2>

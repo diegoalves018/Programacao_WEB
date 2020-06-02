@@ -7,18 +7,20 @@
 <title>Página Inicial</title>
 </head>
 <body>
-<h1>Seja Bem-Vindo!</h1>
 
+<h1>Olá, ${username}!</h1>
+<%
+                     String mensagem = "Bem vindo ao sistema!";
+                 %>
+                 <% out.println(mensagem); %>
 
 
 <%
-response.setHeader("Cache-Control","no-cach,no-store,must-revalidate");
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 if(session.getAttribute("username")==null){
 	response.sendRedirect("index.jsp"); 
 }
 %>
-
-<h2>Olá, ${username}!</h2>
 
 <br>
 <br>

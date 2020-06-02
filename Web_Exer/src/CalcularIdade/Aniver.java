@@ -67,19 +67,19 @@ public class Aniver extends HttpServlet {
 				String regra = classeData.resultadoRegras(resultadoRgs);
 				
 				out.println("Erro ao calcular: " + regra);
-				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				out.println("<a href=\"CalculoAniverJSP.jsp\"> Tentar novamente </a>");
 				
 			}
 
 			if (classeData.calculoIdade() == -404) {
 
 				out.println("Erro ao calcular: " + regrasData);
-				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				out.println("<a href=\"CalculoAniverJSP.jsp\"> Tentar novamente </a>");
 				
 			} else if (classeData.calculoIdade() == -1900) {
 
 				out.println("Erro ao calcular: " + regrasData);
-				out.println("<a href=\"CalculoAniver.html\"> Tentar novamente </a>");
+				out.println("<a href=\"CalculoAniveJSP.jsp\"> Tentar novamente </a>");
 				
 			} else if (resultadoRgs == 0) {
 
