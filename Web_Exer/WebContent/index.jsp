@@ -37,7 +37,7 @@
 <form action="SalvarServlet" method="post">
 <table>
 <tr><td>Nome:</td><td><input type="text" name="nome"/></td></tr>
-<tr><td>Data de Nascimento:</td><td><input type="text" name="dataNascimento"/></td></tr>
+<tr><td>Data de Nascimento:</td><td><input type="text" name="dataNascimento" placeholder="DD-MM-YYYY"/></td></tr>
 <tr><td>Senha:</td><td><input type="password" name="senha"/></td></tr>
 <tr><td>E-mail:</td><td><input type="email" name="email"/></td></tr>
 <tr><td colspan="2"><input type="submit" value="Cadastrar"/></td></tr>
