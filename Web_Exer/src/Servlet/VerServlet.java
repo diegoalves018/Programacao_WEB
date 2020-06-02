@@ -20,7 +20,7 @@ import DAO.UsuarioDao;
 public class VerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		out.println("<a href='index.jsp'>Novo Cadastro</a>");
 		out.println("<h1>Lista de Cadastrados</h1>");

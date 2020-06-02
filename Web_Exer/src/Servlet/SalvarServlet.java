@@ -22,7 +22,7 @@ import DAO.UsuarioDao;
 public class SalvarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		

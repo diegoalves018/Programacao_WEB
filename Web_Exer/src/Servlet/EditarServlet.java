@@ -19,7 +19,7 @@ import DAO.UsuarioDao;
 public class EditarServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		SimpleDateFormat formatUS = new SimpleDateFormat("yyyy-MM-dd");
 		PrintWriter out=response.getWriter();
