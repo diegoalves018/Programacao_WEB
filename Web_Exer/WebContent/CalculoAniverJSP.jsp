@@ -16,7 +16,7 @@
 
 		<form action="regra">
 
-			<input type="text" name="dataNascimento" placeholder="DD/MM/YYYY">
+			<input type="text" name="dataNascimento" placeholder="DD/MM/YYYY" required="required">
 
 			<button>CALCULAR</button>
 

@@ -12,7 +12,7 @@
       }
       div {
         float: left;
-        height: 270px;
+        height: 300px;
         width: 45%;
         padding: 0 10px;
       }
@@ -36,11 +36,11 @@
        <h2>Novo Cadastro</h2>
 <form action="SalvarServlet" method="post">
 <table>
-<tr><td>Nome:</td><td><input type="text" name="nome"/></td></tr>
-<tr><td>Data de Nascimento:</td><td><input type="text" name="dataNascimento" placeholder="DD-MM-YYYY"/></td></tr>
-<tr><td>Senha:</td><td><input type="password" name="senha"/></td></tr>
-<tr><td>E-mail:</td><td><input type="email" name="email"/></td></tr>
-<tr><td colspan="2"><input type="submit" value="Cadastrar"/></td></tr>
+<tr><td>Nome:</td><td><input type="text" name="nome" required="required"/></td></tr>
+<tr><td>Data de Nascimento:</td><td><input type="text" name="dataNascimento" placeholder="DD-MM-YYYY" required="required"/></td></tr>
+<tr><td>Senha:</td><td><input type="password" name="senha" required="required"/></td></tr>
+<tr><td>E-mail:</td><td><input type="email" name="email" required="required"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Cadastrar" required="required"/></td></tr>
 </table>
 </form>
 

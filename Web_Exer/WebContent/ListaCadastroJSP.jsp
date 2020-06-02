@@ -6,7 +6,7 @@ import="DAO.UsuarioDao, DAO.Usuario, java.util.List, java.text.SimpleDateFormat,
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista de Cadastrados em JSP</title>
 </head>
 <body>
 <%
@@ -14,7 +14,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 SimpleDateFormat formatUS = new SimpleDateFormat("yyyy-MM-dd");
 
 List<Usuario> list=UsuarioDao.getTodosCadastros();
-
+out.println("<a href='index.jsp'>Novo Cadastro</a>");
 out.print("<table border='1' width='100%'");
 out.print("<tr><th>Id</th><th>Nome</th><th>Senha</th><th>Email</th><th>Data de Nascimento</th><th>Editar</th><th>Deletar</th></tr>");
 
