@@ -79,7 +79,7 @@ public class Aniver extends HttpServlet {
 			} else if (classeData.calculoIdade() == -1900) {
 
 				out.println("Erro ao calcular: " + regrasData);
-				out.println("<a href=\"CalculoAniveJSP.jsp\"> Tentar novamente </a>");
+				out.println("<a href=\"CalculoAniverJSP.jsp\"> Tentar novamente </a>");
 				
 			} else if (resultadoRgs == 0) {
 
