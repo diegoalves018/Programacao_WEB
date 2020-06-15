@@ -38,9 +38,6 @@ public class SalvarServlet extends HttpServlet {
 		try {
 			Date recebeParaData2 = sdf.parse(formatado2);
 		
-
-		
-		
 		Usuario e=new Usuario();
 		e.setNome(nome);
 		e.setSenha(senha);
@@ -67,4 +64,3 @@ public class SalvarServlet extends HttpServlet {
 	}
 	}
 }
-
